@@ -85,11 +85,11 @@ PM_START_TEXT = """
 *👋 Hello {} !*
 
 *I'm An Anime-Themed Management Bot.*
-*!*
-────────────────────────
+
+My Current Stats 🧘
 *Uptime:* `{}`
-`{}` *User, Across* `{}` *Chats.*
-────────────────────────
+`{}` *Users , Across* `{}` *Chats.*
+
 *Powered By: Isabella Fam 💕*
 """
 
@@ -117,12 +117,12 @@ buttons = [
 
 
 HELP_STRINGS = """
-*✗ MAIN COMMANDS ✗*
+*Main Cmds*
 
-✗ /start - `Starts me! Your probably already used this.`
-✗ /help - `Click this I ll let you know about myself!`
-✗ /settings - `in PM: will send you your settings for all supported modules.`
-✗ *In A Group: Will Redirect You To Pm With All That Chats Settings.*)"""
+/start - `Starts me! Your probably already used this.`
+/help - `Click this I ll let you know about myself!`
+/settings - `in PM: will send you your settings for all supported modules.`
+*In A Group: Will Redirect You To Pm With All That Chats Settings.*)"""
 
 
 
@@ -380,11 +380,11 @@ def yurikorobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" *Evie •☃️•* - `A bot to manage your groups with additional features!`
+            text=""" *Evie* - `A bot to manage your groups with additional features!`
             \n`Here the basic help regarding use of yurikorobot.`
             
             \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
-            \n`Report error/bugs click the Button`""",
+            \n`Report errors (Bugs) click the Button`""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -416,9 +416,9 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
             
-            f"\n\n✗ `Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\n✗ `After adding promote me manually with full rights for faster experience.`\n"
-            f"\n✗ `Than send` `/admincache@YurikoRobot` `in that chat to refresh admin list in My database.`\n"
+            f"\n\n`Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n`After adding promote me manually with full rights for faster experience.`\n"
+            f"\n`Than send` `/admincache@YurikoRobot` `in that chat to refresh admin list in My database.`\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -443,13 +443,13 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n✗ `Congragulations, EvieRobot now ready to manage your group.`"
+            f"\n`Congragulations, EvieRobot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
-            f"\n✗ `Basic Admin tools help you to protect and powerup your group.`"
-            f"\n✗ `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\n`Basic Admin tools help you to protect and powerup your group.`"
+            f"\n`You can ban members, Kick members, Promote someone as admin through commands of bot.`"
             f"\n\n*Welcome*"
-            f"\n✗ `Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n✗ `send` `/setwelcome [message]` `to set a welcome message!`",
+            f"\n`Lets set a welcome message to welcome new users coming to your group.`"
+            f"\n`Send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -461,9 +461,9 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"<b> Setting Up Notes</b>"
             
-            f"\n`✗ You can save message/media/audio or anything as notes`"
-            f"\n`✗ to get a note simply use` # `at the beginning of a word`"
-            f"\n\n`✗ You can also set buttons for notes and filters (refer help menu)`",
+            f"\n`You can save message/media/audio or anything as notes`"
+            f"\n`To get a note simply use` # `at the beginning of a word`"
+            f"\n\n`You can also set buttons for notes and filters (refer help menu)`",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
@@ -474,12 +474,12 @@ def yurikorobot_about_callback(update, context):
             text=f"*Here Is The Help For「Asistant」 Module:*"
             
             f"\n*SETUP ASSISTANT*"
-            f"\n\n✗ `1.) first, add me to your group.`"
-            f"\n\n✗ `2.) then promote me as admin and give all permissions except anonymous admin.`"
-            f"\n\n✗ `3.) add`  `to your group:`"
-            f"\n\n✗ `4.) turn on the video chat first before start to play music.`"
-            f"\n\n✗ *Lets Enjoy The Yuriko Music And Join Support Group @DeCodeSupport*"
-            f"\n\n*✗ Powered By: Isabella Fam 💕*",
+            f"\n\n`1) first, add me to your group.`"
+            f"\n\n`2) then promote me as admin and give all permissions except anonymous admin.`"
+            f"\n\n`3) add `@EvieAssistant`to your group:`"
+            f"\n\n`4) turn on the video chat first before start to play music.`"
+            f"\n\n*Lets Enjoy The Yuriko Music And Join Support Group @DeCodeSupport*"
+            f"\n\n*Powered By: Isabella Fam 💕*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -490,13 +490,13 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n✗ `Congragulations, EvieRobot now ready to manage your group.`"
+            f"\n`Congragulations, EvieRobot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
-            f"\n✗ `Basic Admin tools help you to protect and powerup your group.`"
-            f"\n✗ `You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\n`Basic Admin tools help you to protect and powerup your group.`"
+            f"\n`You can ban members, Kick members, Promote someone as admin through commands of bot.`"
             f"\n\n*Welcome*"
-            f"\n✗ `Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n✗ `send` `/setwelcome [message]` `to set a welcome message!`",
+            f"\n`Lets set a welcome message to welcome new users coming to your group.`"
+            f"\n`Send` `/setwelcome [message]` `to set a welcome message!`",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -505,9 +505,9 @@ def yurikorobot_about_callback(update, context):
         )    
     elif query.data == "yurikorobot_support":
         query.message.edit_text(
-            text="* YURIKO Support Chats*"
+            text="*Evie Support Chats*"
             
-            "\n\n✗ `Join Support Group/Channel`",
+            "\n\n`Join Support Group/Channel`",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
