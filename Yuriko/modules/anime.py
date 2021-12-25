@@ -552,35 +552,35 @@ def kayo(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ──「 Anime search 」──  
+ ──「 Anime Search 」──  
                          
-✗ /anime - `<anime> returns information about the anime.`
+/anime - `<anime> returns information about the anime.`
 
-✗ /whatanime - `returns source of anime when replied to photo or gif.`
+/whatanime - `returns source of anime when replied to photo or gif.`
                                                           
-✗ /character - `<character> returns information about the character.`
+/character - `<character> returns information about the character.`
 
-✗ /manga - `<manga> returns information about the manga.`
+/manga - `<manga> returns information about the manga.`
 
-✗ /user - `<user> returns information about a MyAnimeList user.`
+/user - `<user> returns information about a MyAnimeList user.`
 
-✗ /upcoming - `returns a list of new anime in the upcoming seasons.`
+/upcoming - `returns a list of new anime in the upcoming seasons.`
 
-✗ /airing - `<anime> returns anime airing info.`
+/airing - `<anime> returns anime airing info.`
 
-✗ /whatanime - `<anime> reply to gif or photo.`
+/whatanime - `<anime> reply to gif or photo.`
 
-✗ /kaizoku - `<anime> search an anime on animekaizoku.com`
+/kaizoku - `<anime> search an anime on animekaizoku.com`
 
-✗ /kayo - `<anime> search an anime on animekayo.com`
+/kayo - `<anime> search an anime on animekayo.com`
 
  「 Anime Quotes 」
 
-✗ /animequotes - `for anime quotes randomly as photos.`
+/animequotes - `for anime quotes randomly as photos.`
 
-✗ /quote - `send quotes randomly as text`
+/quote - `send quotes randomly as text`
 
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
+*Powered By: Isabella Fam 💕*
  """
 
 ANIME_HANDLER = DisableAbleCommandHandler("anime", anime, run_async=True)
@@ -603,7 +603,7 @@ dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
-__mod_name__ = "Aɴɪᴍᴇ"
+__mod_name__ = "Anime 🔮"
 __command_list__ = [
     "anime", "manga", "character", "user", "upcoming", "kaizoku", "airing",
     "kayo"
