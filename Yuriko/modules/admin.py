@@ -922,51 +922,51 @@ def button(update: Update, context: CallbackContext) -> str:
 __help__ = """
 *User Commands*:
 
-✗ /admins - `list of admins in the chat`
+/admins - `list of admins in the chat`
 
-✗ /pinned - `to get the current pinned message.`
+/pinned - `to get the current pinned message.`
 
 *The Following Commands are Admins only:* 
 
-✗ /pin - `silently pins the message replied to - add 'loud' or 'notify' to give notifs to users`
+/pin - `silently pins the message replied to - add 'loud' or 'notify' to give notifs to users`
 
-✗ /unpin - `unpins the currently pinned message`
+/unpin - `unpins the currently pinned message`
 
-✗ /invitelink - `gets invitelink`
+/invitelink - `gets invitelink`
 
-✗ /promote - `promotes the user replied to`
+/promote - `promotes the user replied to`
 
-✗ /fullpromote - `promotes the user replied to with full rights`
+/fullpromote - `promotes the user replied to with full rights`
 
-✗ /demote - `demotes the user replied to`
+/demote - `demotes the user replied to`
 
-✗ /title - `<title here> sets a custom title for an admin that the bot promoted`
+/title - `<title here> sets a custom title for an admin that the bot promoted`
 
-✗ /admincache - `force refresh the admins list`
+/admincache - `force refresh the admins list`
 
-✗ /del - `deletes the message you replied to`
+/del - `deletes the message you replied to`
 
-✗ /purge - `deletes all messages between this and the replied to message.`
+/purge - `deletes all messages between this and the replied to message.`
 
-✗ /purge - `<integer X> deletes the replied message, and X messages following it if replied to a message.`
+/purge - `<integer X> deletes the replied message, and X messages following it if replied to a message.`
 
-✗ /setgtitle - `<text> set group title`
+/setgtitle - `<text> set group title`
 
-✗ /setgpic - `reply to an image to set as group photo`
+/setgpic - `reply to an image to set as group photo`
 
-✗ /setdesc - `Set group description`
+/setdesc - `Set group description`
 
-✗ /setsticker - `Set group sticker`
+/setsticker - `Set group sticker`
 
 *Rules*:
 
-✗ /rules - `get the rules for this chat.`
+/rules - `get the rules for this chat.`
 
-✗ /setrules - `<your rules here>  set the rules for this chat.`
+/setrules - `<your rules here>  set the rules for this chat.`
 
-✗ /clearrules - `clear the rules for this chat.`
+/clearrules - `clear the rules for this chat.`
 
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
+*Powered By: Isabella Fam 💕*
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)
@@ -1008,7 +1008,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "Aᴅᴍɪɴꜱ"
+__mod_name__ = "Admins 👮‍♂"
 __command_list__ = [
     "setdesc"
     "setsticker"
