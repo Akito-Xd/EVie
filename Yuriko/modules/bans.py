@@ -549,30 +549,29 @@ __help__ = """
 *User Commands:*
 
 /kickme - `kicks the user who issued the command`
+/banme - `bans the user who issued the command`
 
-*Admins Commands Only:*
+*Admin Only:*
 
 /ban - `bans a user. (via handle, or reply)`
-
 /sban - `Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)`
-
 /tban - `bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.`
-
 /unban - `unbans a user. (via handle, or reply)`
-
 /kick - `kicks a user out of the group, (via handle, or reply)`
-
 /mute - `silences a user. Can also be used as a reply, muting the replied to user.`
-
 /tmute - `mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.`
-
 /unmute - `unmutes a user. Can also be used as a reply, muting the replied to user.`
-
 /zombies - `searches deleted accounts`
-
 /zombies - `removes deleted accounts from the group.`
-
 /snipe - `Make me send a message to a specific chat.`
+
+*New 👮‍♂️*
+
+/cban [channel_id] - `ban channel from sending message as channel.`
+/cunban [channel_id] - `unban channel from sending message as channel.`
+/add_whitelist [channel_id] - `add channel into whitelist and protect channel for automatic actions.`
+/del_whitelist [channel_id] - `remove channel from whitelist.`
+/show_whitelist - `show all white list channels.`
 
 *Powered By: Isabella Fam 💕*
 """
