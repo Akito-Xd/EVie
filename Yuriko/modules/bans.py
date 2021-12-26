@@ -69,7 +69,7 @@ def ban(update: Update, context: CallbackContext) -> str:
     except BadRequest as excp:
         if excp.message != "User not found":
             raise
-        message.reply_text("Can't seem to find this person.")
+        message.reply_text("Seems unable to find this person.")
         return log_message
     if user_id == bot.id:
         message.reply_text("Oh yeah, ban myself, noob!")
@@ -95,7 +95,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         elif user_id in WOLVES:
             message.reply_text("Trader access make them ban immune!")
         else:
-            message.reply_text("⚠️ Cannot banned admin.")
+            message.reply_text("⚠️ Cannot ban an admin.")
         return log_message
     if message.text.startswith("/s"):
         silent = True
@@ -189,7 +189,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
     except BadRequest as excp:
         if excp.message != "User not found":
             raise
-        message.reply_text("I can't seem to find this user.")
+        message.reply_text("Seems unable to find this user.")
         return log_message
     if user_id == bot.id:
         message.reply_text("I'm not gonna BAN myself, are you crazy?")
@@ -349,7 +349,7 @@ def punch(update: Update, context: CallbackContext) -> str:
         if excp.message != "User not found":
             raise
 
-        message.reply_text("⚠️ I can't seem to find this user.")
+        message.reply_text("⚠️ I can't find this user.")
         return log_message
     if user_id == bot.id:
         message.reply_text("Yeahhh I'm not gonna do that.")
@@ -425,7 +425,7 @@ def unban(update: Update, context: CallbackContext) -> str:
     except BadRequest as excp:
         if excp.message != "User not found":
             raise
-        message.reply_text("I can't seem to find this user.")
+        message.reply_text("⚠️ I can't find this user.")
         return log_message
     if user_id == bot.id:
         message.reply_text("How would I unban myself if I wasn't here...?")
@@ -475,7 +475,7 @@ def selfunban(update: Update, context: CallbackContext) -> str:
         member = chat.get_member(user.id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("⚠️ I can't find this user.")
             return
         else:
             raise
@@ -504,7 +504,7 @@ def banme(update: Update, context: CallbackContext):
     chat = update.effective_chat
     user = update.effective_user
     if is_user_admin(update.effective_chat, user_id):
-        update.effective_message.reply_text("⚠️ I cannot banned admin.")
+        update.effective_message.reply_text("⚠️ I cannot ban an admin.")
         return
 
     res = update.effective_chat.ban_member(user_id)
@@ -548,37 +548,37 @@ def snipe(update: Update, context: CallbackContext):
 __help__ = """
 *User Commands:*
 
-✗ /kickme - `kicks the user who issued the command`
+/kickme - `kicks the user who issued the command`
 
 *Admins Commands Only:*
 
-✗ /ban - `bans a user. (via handle, or reply)`
+/ban - `bans a user. (via handle, or reply)`
 
-✗ /sban - `Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)`
+/sban - `Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)`
 
-✗ /tban - `bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.`
+/tban - `bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.`
 
-✗ /unban - `unbans a user. (via handle, or reply)`
+/unban - `unbans a user. (via handle, or reply)`
 
-✗ /kick - `kicks a user out of the group, (via handle, or reply)`
+/kick - `kicks a user out of the group, (via handle, or reply)`
 
-✗ /mute - `silences a user. Can also be used as a reply, muting the replied to user.`
+/mute - `silences a user. Can also be used as a reply, muting the replied to user.`
 
-✗ /tmute - `mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.`
+/tmute - `mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.`
 
-✗ /unmute - `unmutes a user. Can also be used as a reply, muting the replied to user.`
+/unmute - `unmutes a user. Can also be used as a reply, muting the replied to user.`
 
-✗ /zombies - `searches deleted accounts`
+/zombies - `searches deleted accounts`
 
-✗ /zombies - `removes deleted accounts from the group.`
+/zombies - `removes deleted accounts from the group.`
 
-✗ /snipe - `Make me send a message to a specific chat.`
+/snipe - `Make me send a message to a specific chat.`
 
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
+*Powered By: Isabella Fam 💕*
 """
 
 
-__mod_name__ = "Bᴀɴ/Mᴜᴛᴇ"
+__mod_name__ = "Ban/Mute ⚠️"
 
 BAN_HANDLER = CommandHandler(["ban", "sban"], ban, run_async=True)
 TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban, run_async=True)
