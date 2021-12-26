@@ -79,16 +79,16 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-yurikorobot_IMG = "https://telegra.ph/file/8e2a42de33d0fed7435f8.jpg"
+EVIE_STICKER= "CAACAgEAAxkBAANWYcgXNYxePo6o1rgBvgPAAAHZavL1AAK1AQAC_XBBRtg3sCChzmfrIwQ"
 
 PM_START_TEXT = """
 *👋 Hello {} !*
 
-*I'm An Anime-Themed Management Bot.*
+*I'm EvieX An Anime-Themed Group Management Bot.*
 
 My Current Stats 🧘
-*Uptime:* `{}`
-`{}` *Users , Across* `{}` *Chats.*
+*Uptime ⏰:* `{}`
+`{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
 
 *Powered By: Isabella Fam 💕*
 """
@@ -127,7 +127,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @IsabellaSupport 💕"""
+ [Isabella Fam💕](t,me/IsabellaSupport)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -242,8 +242,8 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_photo(
-            yurikorobot_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+        update.effective_message.reply_sticker(
+            EVIE_STICKER, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -380,8 +380,8 @@ def yurikorobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" *Evie* - `A bot to manage your groups with additional features!`
-            \n`Here the basic help regarding use of yurikorobot.`
+            text=""" *EvieX* - `A bot to manage your groups with additional features!`
+            \n`Here the basic help regarding use of EvieXBot.`
             
             \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
             \n`Report errors (Bugs) click the Button`""",
@@ -418,7 +418,7 @@ def yurikorobot_about_callback(update, context):
             
             f"\n\n`Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n`After adding promote me manually with full rights for faster experience.`\n"
-            f"\n`Than send` `/admincache@YurikoRobot` `in that chat to refresh admin list in My database.`\n"
+            f"\n`Than send` `/admincache@EvieXBot` `in that chat to refresh admin list in My database.`\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -443,7 +443,7 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n`Congragulations, EvieRobot now ready to manage your group.`"
+            f"\n`Congragulations, EvieXBot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
             f"\n`Basic Admin tools help you to protect and powerup your group.`"
             f"\n`You can ban members, Kick members, Promote someone as admin through commands of bot.`"
@@ -471,14 +471,14 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_asst":
         query.message.edit_text(
-            text=f"*Here Is The Help For「Asistant」 Module:*"
+            text=f"*Here Is The Help For Assistant Module:*"
             
             f"\n*SETUP ASSISTANT*"
             f"\n\n`1) first, add me to your group.`"
             f"\n\n`2) then promote me as admin and give all permissions except anonymous admin.`"
-            f"\n\n`3) add `@EvieAssistant`to your group:`"
+            f"\n\n`3) add `@EvieXAssistant`to your group:`"
             f"\n\n`4) turn on the video chat first before start to play music.`"
-            f"\n\n*Lets Enjoy The Yuriko Music And Join Support Group @DeCodeSupport*"
+            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @IsabellaSupport*"
             f"\n\n*Powered By: Isabella Fam 💕*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -490,7 +490,7 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n`Congragulations, EvieRobot now ready to manage your group.`"
+            f"\n`Congragulations, EvieXBot now ready to manage your group.`"
             f"\n\n*Admin Tools*"
             f"\n`Basic Admin tools help you to protect and powerup your group.`"
             f"\n`You can ban members, Kick members, Promote someone as admin through commands of bot.`"
@@ -505,7 +505,7 @@ def yurikorobot_about_callback(update, context):
         )    
     elif query.data == "yurikorobot_support":
         query.message.edit_text(
-            text="*Evie Support Chats*"
+            text="*EvieX Support Chats*"
             
             "\n\n`Join Support Group/Channel`",
             parse_mode=ParseMode.MARKDOWN,
@@ -556,7 +556,7 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *EvieRobot*
+            text=""" Hi..😻 I'm *EvieXBot*
                  \nHere is the [🔥Source Code🔥](https://github.com/) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -810,7 +810,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1947924017 and DONATION_LINK:
+        if OWNER_ID != 2034574627 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -858,7 +858,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "*I Aᴍ Aʟɪᴠᴇ 🔥*")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "*I Am Alive 🔥*")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
