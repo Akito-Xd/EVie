@@ -567,11 +567,11 @@ __help__ = """
 
 *New 👮‍♂️*
 
-/cban [channel_id] - `ban channel from sending message as channel.`
-/cunban [channel_id] - `unban channel from sending message as channel.`
-/add_whitelist [channel_id] - `add channel into whitelist and protect channel for automatic actions.`
-/del_whitelist [channel_id] - `remove channel from whitelist.`
-/show_whitelist - `show all white list channels.`
+/banc [channel_id] - `ban channel from sending message as channel.`
+/unbanc [channel_id] - `unban channel from sending message as channel.`
+/addfreelist [channel_id] - `add channel into whitelist and protect channel for automatic actions.`
+/delfreelist [channel_id] - `remove channel from whitelist.`
+/showfreelist - `show all white list channels.`
 
 *Powered By: Isabella Fam 💕*
 """
