@@ -22,5 +22,5 @@ UD_HANDLER = DisableAbleCommandHandler(["ud"], ud, run_async=True)
 
 dispatcher.add_handler(UD_HANDLER)
 
-__command_list__ = ["ud"]
+__command_list__ = ["Ud 📖"]
 __handlers__ = [UD_HANDLER]
