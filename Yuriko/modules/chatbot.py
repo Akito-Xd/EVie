@@ -42,7 +42,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                " 𝙲𝚑𝚊𝚝𝙱𝚘𝚝 𝙳𝚒𝚜𝚊𝚋𝚕𝚎 𝙱𝚢🔇 {}.".format(mention_html(user.id, user.first_name)),
+                "Chatbot Disabled By 🔇 {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -67,7 +67,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                " 𝙲𝚑𝚊𝚝𝙱𝚘𝚝 𝙴𝚗𝚊𝚋𝚕𝚎 𝙱𝚢📣 {}.".format(mention_html(user.id, user.first_name)),
+                "Chatbot Enabled By 🔈 {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -78,14 +78,14 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
 def kuki(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
-    msg = f"Choose an option👻"
+    msg = f"Choose an option 👻"
     keyboard = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            text="Enable🔥",
+            text="Enable",
             callback_data="add_chat({})")],
        [
         InlineKeyboardButton(
-            text="Disable💔",
+            text="Disable",
             callback_data="rm_chat({})")]])
     message.reply_text(
         msg,
@@ -138,16 +138,16 @@ def list_all_chats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(text, parse_mode="HTML")
 
 __help__ = """
-✗ `Chatbot utilizes the` *YURIKO* `api which allows Yuriko to talk and provide a more interactive group chat experience.`
+`Chatbot utilizes the` *EvieX* `api which allows Yuriko to talk and provide a more interactive group chat experience.`
 
 *Admins only Commands*:
  
-✗ /Chatbot - `Shows chatbot control panel`
+/Chatbot - `Shows chatbot control panel`
   
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
+*Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
 """
 
-__mod_name__ = "CʜᴀᴛBᴏᴛ"
+__mod_name__ = "Chatbot 💭"
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
