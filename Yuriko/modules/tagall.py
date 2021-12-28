@@ -34,4 +34,4 @@ async def _(event):
     await event.delete()
 
 
-__mod_name__ = "Tagger"
+__mod_name__ = "Tagger 👥"
