@@ -139,7 +139,7 @@ def sudo_plus(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "You don't have this right, sorry and you are cheap admin 🙂",
+                "You don't have this right, sorry and you are cheap admin!",
             )
 
     return is_sudo_plus_func
@@ -202,7 +202,7 @@ def user_admin(func):
                 pass
         else:
             update.effective_message.reply_text(
-                "You don't have this right, sorry and you are cheap admin 🙂",
+                "You don't have this right, sorry and you are cheap admin!",
             )
 
     return is_admin
@@ -277,7 +277,7 @@ def bot_can_delete(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_delete = "I can't delete messages here!\nMake sure I'm admin and can delete other user's messages 🙂"
+            cant_delete = "I can't delete messages here!\nMake sure I'm admin and can delete other user's messages!"
         else:
             cant_delete = f"I can't delete messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can delete other user's messages there."
 
@@ -298,7 +298,7 @@ def can_pin(func):
 
         if update_chat_title == message_chat_title:
             cant_pin = (
-                "I can't pin messages here!\nMake sure I'm admin and can pin messages 🙂"
+                "I can't pin messages here!\nMake sure I'm admin and can pin messages!"
             )
         else:
             cant_pin = f"I can't pin messages in <b>{update_chat_title}</b>!\nMake sure I'm admin and can pin messages there."
@@ -319,7 +319,7 @@ def can_promote(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_promote = "I can't promote/demote messages here!\nMake sure I'm admin and can promote/demote chat memebers 🙂"
+            cant_promote = "I can't promote/demote messages here!\nMake sure I'm admin and can promote/demote chat memebers!"
         else:
             cant_promote = (
                 f"I can't promote/demote people in <b>{update_chat_title}</b>!\n"
@@ -342,7 +342,7 @@ def can_restrict(func):
         message_chat_title = update.effective_message.chat.title
 
         if update_chat_title == message_chat_title:
-            cant_restrict = "I can't restrict memebers here!\nMake sure I'm admin and can restrict chat memebers 🙂"
+            cant_restrict = "I can't restrict memebers here!\nMake sure I'm admin and can restrict chat memebers!"
         else:
             cant_restrict = f"I can't restrict people in <b>{update_chat_title}</b>!\nMake sure I'm admin there and can restrict users."
 
@@ -368,7 +368,7 @@ def user_can_ban(func):
             and user not in [777000, 1087968824]
         ):
             update.effective_message.reply_text(
-                "Sorry son, but you're not worthy to wield the banhammer👉😏.",
+                "Sorry son, but you're not worthy to wield the banhammer!",
             )
             return ""
         return func(update, context, *args, **kwargs)
