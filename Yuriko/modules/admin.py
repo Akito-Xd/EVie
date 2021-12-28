@@ -33,12 +33,12 @@ def set_sticker(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        return msg.reply_text("You have no right to change this noob Sharma ki bata ha")
+        return msg.reply_text("You have no right to change this Noob!")
 
     if msg.reply_to_message:
         if not msg.reply_to_message.sticker:
             return msg.reply_text(
-                "You need to reply to some sticker to set chat sticker set!😏"
+                "You need to reply to some sticker to set chat sticker set!"
             )
         stkr = msg.reply_to_message.sticker.set_name
         try:
@@ -47,11 +47,11 @@ def set_sticker(update: Update, context: CallbackContext):
         except BadRequest as excp:
             if excp.message == "Participants_too_few":
                 return msg.reply_text(
-                    "Sorry, due to telegram restrictions chat needs to have minimum 100 members before they can have group stickers!💫"
+                    "Sorry, due to telegram restrictions chat needs to have minimum 100 members before they can have group stickers!"
                 )
             msg.reply_text(f"Error! {excp.message}.")
     else:
-        msg.reply_text("You need to reply to some sticker to set chat sticker set!😏")
+        msg.reply_text("You need to reply to some sticker to set chat sticker set!")
        
     
 @bot_admin
@@ -97,7 +97,7 @@ def rmchatpic(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("You don't have enough rights to delete group photo")
+        msg.reply_text("You don't have enough rights to delete group photo!")
         return
     try:
         context.bot.delete_chat_photo(int(chat.id))
@@ -114,16 +114,16 @@ def set_desc(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        return msg.reply_text("You're missing rights to change chat info!✋")
+        return msg.reply_text("You're missing rights to change chat info!")
 
     tesc = msg.text.split(None, 1)
     if len(tesc) >= 2:
         desc = tesc[1]
     else:
-        return msg.reply_text("Setting empty description won't do anything!🤔")
+        return msg.reply_text("Setting empty description won't do anything!")
     try:
         if len(desc) > 255:
-            return msg.reply_text("Description must needs to be under 255 characters!🙂")
+            return msg.reply_text("Description must needs to be under 255 characters!")
         context.bot.set_chat_description(chat.id, desc)
         msg.reply_text(f"Successfully updated chat description in {chat.title}!")
     except BadRequest as excp:
@@ -138,12 +138,12 @@ def setchat_title(update: Update, context: CallbackContext):
     args = context.args
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("You don't have enough rights to change chat info so sameless saste admin 😏💰!")
+        msg.reply_text("You don't have enough rights to change chat info so sameless saste admin!")
         return
 
     title = " ".join(args)
     if not title:
-        msg.reply_text("Kuch text do taki ma set new title in your chat!😴")
+        msg.reply_text("Give some text to set a new title for your chat!")
         return
 
     try:
@@ -176,7 +176,7 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("Bhai,Bhen jo bhi ho apke pass ye right na ha sorry aur so sameless you are saste admin  🙂 dil se bura laga support @DeeCodeBots")
+        message.reply_text("You don't have enough rights to do that!")
         return
 
     user_id = extract_user(message, args)
@@ -193,11 +193,11 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text("How Maltb ma fhir se usko admin bano wo jabki already admin ha🥺")
+        message.reply_text("How am I meant to promote someone that's already an admin?")
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't promote myself!🤣 Koi admin ha wo merko admin dega 🤔")
+        message.reply_text("I can't promote myself, Get an admin to do it for me!")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -218,9 +218,9 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote🤣 someone who isn't in the group.🙂")
+            message.reply_text("I can't promote1 someone who isn't in the group lol!")
         else:
-            message.reply_text("Bhai kuch occured name se error ha for promoting.😏💫")
+            message.reply_text("An error occured while promoting!")
         return
 
     bot.sendMessage(
@@ -258,14 +258,14 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("Bhai,Bhen jo bhi ho apke pass ye right na ha sorry 🙂 dil se bura laga support @DeeCodeBots ")
+        message.reply_text("You don't have enough rights to do that!")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.💫.",
+            "You don't seem to be referring to a user or the ID specified is incorrect..",
         )
         return
 
@@ -275,11 +275,11 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text("How Maltb ma fhir se usko admin bano wo jabki already admin ha🥺")
+        message.reply_text("How am I meant to promote someone that's already an admin?")
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't promote myself!🤣 Koi admin ha wo merko admin dega 🤔.")
+        message.reply_text("I can't promote myself, Get an admin to do it for me!")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -295,9 +295,9 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.💫")
+            message.reply_text("I can't promote someone who isn't in the group lol!")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("An error occured while promoting!")
         return
 
     bot.sendMessage(
@@ -335,7 +335,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("Bhai,Bhen jo bhi ho apke pass ye right na ha sorry 🙂 dil se bura laga support @DeeCodeBots")
+        message.reply_text("You don't have enough rights to do that!")
         return
 
     user_id = extract_user(message, args)
@@ -352,11 +352,11 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text("How Maltb ma fhir se usko admin bano wo jabki already admin ha🥺")
+        message.reply_text("How am I meant to promote someone that's already an admin?")
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't promote myself!🤣 Koi admin ha wo merko admin dega 🤔")
+        message.reply_text("I can't promote myself, Get an admin to do it for me!")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -378,9 +378,9 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.")
+            message.reply_text("I can't promote someone who isn't in the group lol!")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("An error occured while promoting!")
         return
 
     keyboard = InlineKeyboardMarkup([[
@@ -434,11 +434,11 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if not user_member.status == "administrator":
-        message.reply_text("Can't demote what wasn't promoted!🎉")
+        message.reply_text("Can't demote what wasn't promoted!")
         return
 
     if user_id == bot.id:
-        message.reply_text("Agar merko demote kiya to dekha lena 😏 aur me apne apko demote na kar skta sed🥺")
+        message.reply_text("I can't demote myself! Get an admin to do it for me!")
         return
 
     try:
@@ -525,7 +525,7 @@ def set_title(update: Update, context: CallbackContext):
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't set my own title myself! Get the one who made me admin to do it for me.",
+            "I can't set my own title myself, Get the one who made me admin to do it for me!",
         )
         return
 
@@ -535,14 +535,14 @@ def set_title(update: Update, context: CallbackContext):
 
     if len(title) > 16:
         message.reply_text(
-            "The title length is longer than 16 characters.\nTruncating it to 16 characters.",
+            "The title length is longer than 16 characters.\nTruncating it to 16 characters!",
         )
 
     try:
         bot.setChatAdministratorCustomTitle(chat.id, user_id, title)
     except BadRequest:
         message.reply_text(
-            "Either they aren't promoted by me or you set a title text that is impossible to set."
+            "Either they aren't promoted by me or you set a title text that is impossible to set!"
         )
         return
 
@@ -673,7 +673,7 @@ def unpin(update: Update, context: CallbackContext):
         except BadRequest as excp:
             if excp.message == "Message to unpin not found":
                msg.reply_text(
-                   "I can't see pinned message, Maybe already unpined, or pin Message to old 🙂"
+                   "I can't see pinned message, Maybe already unpined, or pin Message to old!"
                )
             else:
                 raise
@@ -756,7 +756,7 @@ def adminlist(update, context):
     bot = context.bot
 
     if update.effective_message.chat.type == "private":
-        send_message(update.effective_message, "This command only works in Groups.")
+        send_message(update.effective_message, "This command only works in Groups!")
         return
 
     chat = update.effective_chat
@@ -923,47 +923,30 @@ __help__ = """
 *User Commands*:
 
 /admins - `list of admins in the chat`
-
 /pinned - `to get the current pinned message.`
 
 *The Following Commands are Admins only:* 
 
 /pin - `silently pins the message replied to - add 'loud' or 'notify' to give notifs to users`
-
 /unpin - `unpins the currently pinned message`
-
 /invitelink - `gets invitelink`
-
 /promote - `promotes the user replied to`
-
 /fullpromote - `promotes the user replied to with full rights`
-
 /demote - `demotes the user replied to`
-
 /title - `<title here> sets a custom title for an admin that the bot promoted`
-
 /admincache - `force refresh the admins list`
-
 /del - `deletes the message you replied to`
-
 /purge - `deletes all messages between this and the replied to message.`
-
 /purge - `<integer X> deletes the replied message, and X messages following it if replied to a message.`
-
 /setgtitle - `<text> set group title`
-
 /setgpic - `reply to an image to set as group photo`
-
 /setdesc - `Set group description`
-
 /setsticker - `Set group sticker`
 
 *Rules*:
 
 /rules - `get the rules for this chat.`
-
 /setrules - `<your rules here>  set the rules for this chat.`
-
 /clearrules - `clear the rules for this chat.`
 
 *Powered By: Isabella Fam 💕*
