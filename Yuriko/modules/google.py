@@ -276,7 +276,7 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__mod_name__ = "Sᴇᴀʀᴄʜ"
+__mod_name__ = "Search 🔎"
 
 __help__ = """
 /google - `<query> Perform a google search`
