@@ -288,7 +288,7 @@ __help__ = """
 /country - `<country name> Gathering info about given country`
 /imdb - `<Movie name> Get full info about a movie with imdb.com`
 
-Evie - `<query> Yuriko answers the query`
+Evie - `<query> Evie answers the query`
 
 💡 Ex: `Evie where is Japan?`
 
