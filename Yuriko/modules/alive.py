@@ -10,7 +10,7 @@ from datetime import datetime
 import random
 from telethon import events, Button, custom, version
 from Yuriko.events import register
-from Yuriko import telethn as aasf
+from Yuriko import telethn as borg
 from Yuriko import StartTime, dispatcher
 from telethon.tl.types import ChannelParticipantsAdmins
 
