@@ -319,15 +319,16 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
 
 CONN_HELP = """
  Actions are available with connected groups:
- • View and edit Notes.
- • View and edit Filters.
- • Get invite link of chat.
- • Set and control AntiFlood settings.
- • Set and control Blacklist settings.
- • Set Locks and Unlocks in chat.
- • Enable and Disable commands in chat.
- • Export and Imports of chat backup.
- • More in future!"""
+ 
+ ☻ View and edit Notes.
+ ☻ View and edit Filters.
+ ☻ Get invite link of chat.
+ ☻ Set and control AntiFlood settings.
+ ☻ Set and control Blacklist settings.
+ ☻ Set Locks and Unlocks in chat.
+ ☻ Enable and Disable commands in chat.
+ ☻ Export and Imports of chat backup.
+ ☻ More in future!"""
 
 
 def help_connect_chat(update, context):
@@ -400,22 +401,20 @@ def connect_button(update, context):
         connect_chat(update, context)
 
 
-__mod_name__ = "Cᴏɴɴᴇᴄᴛɪᴏɴ"
+__mod_name__ = "Connection 💑"
 
 __help__ = """
 *Sometimes, you just want to add some notes and filters to a group chat, but you don't want everyone to see; This is where connections come in...*
 *This allows you to connect to a chat's database, and add things to it without the commands appearing in chat! For obvious reasons, you need to be an admin to add things; but any member in the group can view your data.*
 
-/connect - `Connects to chat (Can be done in a group by /connect or /connect <chat id> in PM)`
-/connection - `List connected chats`
-/disconnect - `Disconnect from a chat`
-/helpconnect - `List available commands that can be used remotely`
+➮ /connect - Connects to chat (Can be done in a group by /connect or /connect <chat id> in PM)
+➮ /connection - List connected chats
+➮ /disconnect - Disconnect from a chat
+➮ /helpconnect - List available commands that can be used remotely
 
 *Admins only:*
 
-/allowconnect - `<yes/no> allow a user to connect to a chat`
-
-*Powered By: Isabella Fam 💕*
+➮ /allowconnect - <yes/no> allow a user to connect to a chat
 """
 
 CONNECT_CHAT_HANDLER = CommandHandler(
