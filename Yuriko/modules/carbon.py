@@ -24,12 +24,13 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://telegra.ph/file/7e82b584cfe447ee154d7.jpg"
+MEMEK = "https://telegra.ph/file/d1df93a4e47f3691cffdc.jpg"
 
 @pbot.on_message(filters.command("alive"))
 async def alive(_, message):
-    await message.reply_text(
-"""✨ **Hey I Am EvieX** 
+    await message.reply_photo(
+        photo=MEMEK,
+        caption=f"""✨ **Hey I Am EvieX** 
 
 **🧑‍💻 Powered By : [TeamEvieX](https://t.me/TeamEvieX)**
 **🐍 Python Version :** `{y()}`
