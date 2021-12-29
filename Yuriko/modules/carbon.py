@@ -31,7 +31,7 @@ async def alive(_, message):
     await message.reply_text(
 """✨ **Hey I Am EvieX** 
 
-**🧑‍💻 Powered By : [TeamDeeCode](https://t.me/IsabellaSupport)**
+**🧑‍💻 Powered By : [TeamEvieX](https://t.me/TeamEvieX)**
 **🐍 Python Version :** `{y()}`
 **📃 Library Version :** `{o}`
 **♻️ Telethon Version :** `{s}`
@@ -45,7 +45,7 @@ async def alive(_, message):
                     InlineKeyboardButton(
                         "Repo", url="https://GitHub.com/"), 
                     InlineKeyboardButton(
-                        "Support", url="https://IsabellaSupport")
+                        "Support", url="https://EvieXSupport")
                 ]
             ]
         )
