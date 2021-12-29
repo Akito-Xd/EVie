@@ -84,13 +84,14 @@ EVIE_STICKER= "https://telegra.ph/file/d1df93a4e47f3691cffdc.jpg"
 PM_START_TEXT = """
 *👋 Hello {} !*
 
-*I'm EvieX An Anime-Themed Group Management Bot.*
+*I'm EvieX Poweful & Stable Robot To Manage Your Groups *
 
-My Current Stats 🧘
-*Uptime ⏰:* `{}`
-`{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
+〄 My Current Stats 🧘
 
-*Powered By @TeamEvieX*
+⌦ `{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
+⌦ *Uptime ⏰:* `{}`
+
+⌦ *Powered By @TeamEvieX*
 """
 
 buttons = [
@@ -111,18 +112,18 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Add Evie To Your Group 😊", url="http://t.me/EvieXBot?startgroup=true"),
+        InlineKeyboardButton(text="Add Evie To Your Group 👨‍❤️‍💋‍👨", url="http://t.me/EvieXBot?startgroup=true"),
     ],
 ]
 
 
 HELP_STRINGS = """
-*Main Cmds*
+*Main Commands*
 
-/start - `Starts me! Your probably already used this.`
-/help - `Click this I ll let you know about myself!`
-/settings - `in PM: will send you your settings for all supported modules.`
-*In A Group: Will Redirect You To Pm With All That Chats Settings.*)"""
+➮ /start - Starts me! Your probably already used this
+➮ /help - Click this I ll let you know about myself!
+➮ /settings - in PM: will send you your settings for all supported modules
+*In A Group: Will Redirect You To Pm With All That Chats Settings*)"""
 
 
 
@@ -443,13 +444,13 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n`Congragulations, EvieXBot now ready to manage your group.`"
+            f"\n Congragulations, EvieXBot now ready to manage your group"
             f"\n\n*Admin Tools*"
-            f"\n`Basic Admin tools help you to protect and powerup your group.`"
-            f"\n`You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\nBasic Admin tools help you to protect and powerup your group"
+            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot"
             f"\n\n*Welcome*"
-            f"\n`Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n`Send` `/setwelcome [message]` `to set a welcome message!`",
+            f"\nLets set a welcome message to welcome new users coming to your group"
+            f"\nSend `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -461,9 +462,9 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"<b> Setting Up Notes</b>"
             
-            f"\n`You can save message/media/audio or anything as notes`"
-            f"\n`To get a note simply use` # `at the beginning of a word`"
-            f"\n\n`You can also set buttons for notes and filters (refer help menu)`",
+            f"\nYou can save message/media/audio or anything as notes"
+            f"\nTo get a note simply use` # `at the beginning of a word"
+            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
@@ -474,12 +475,11 @@ def yurikorobot_about_callback(update, context):
             text=f"*Here Is The Help For Assistant Module:*"
             
             f"\n*SETUP ASSISTANT*"
-            f"\n\n`1) first, add me to your group.`"
-            f"\n\n`2) then promote me as admin and give all permissions except anonymous admin.`"
-            f"\n\n`3) add `@EvieXAssistant`to your group:`"
-            f"\n\n`4) turn on the video chat first before start to play music.`"
-            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @EvieXSupport*"
-            f"\n\n*Powered By: Isabella Fam 💕*",
+            f"\n\n1) first, add me to your group"
+            f"\n\n2) then promote me as admin and give all permissions except anonymous admin"
+            f"\n\n3) add @EvieXAssistant to your group"
+            f"\n\n4) turn on the video chat first before start to play music"
+            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @EvieXSupport*,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
