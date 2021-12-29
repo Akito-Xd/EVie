@@ -4,7 +4,7 @@ from Yuriko import pbot as app
 from Yuriko.utils.pluginhelper import fetch
 from Yuriko.utils.inlinefuncs import *
 
-__MODULE__ = "ɪɴʟɪɴᴇ"
+__MODULE__ = "Inline 〽️"
 __HELP__ = """See inline for help related to inline"""
 
 
