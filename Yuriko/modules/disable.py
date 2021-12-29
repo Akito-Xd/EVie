@@ -337,8 +337,8 @@ if is_module_loaded(FILENAME):
     dispatcher.add_handler(COMMANDS_HANDLER)
     dispatcher.add_handler(TOGGLE_HANDLER)
     
-  __help__ = ""
-  
+    
+    __help__ = """
     /cmds*:* check the current status of disabled commands
     
     *Admins only:*
@@ -351,6 +351,7 @@ if is_module_loaded(FILENAME):
     """
 
     __mod_name__ = "Disabling ❗️"   
+    
 
 else:
     DisableAbleCommandHandler = CommandHandler
