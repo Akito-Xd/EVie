@@ -90,7 +90,7 @@ My Current Stats 🧘
 *Uptime ⏰:* `{}`
 `{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
 
-*Powered By: Isabella Fam 💕*
+*Powered By [EvieXTeam](t.me/TeamEvieX)*
 """
 
 buttons = [
@@ -127,7 +127,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- [Isabella Fam💕](t,me/IsabellaSupport)"""
+ [EvieXTeam 💕](t,me/IsabellaSupport)"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -248,7 +248,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Support 👮‍♂", url="t.me/IsabellaSupport")]]
+                [[InlineKeyboardButton(text="Support 👮‍♂", url="t.me/EvieXSupport")]]
             ),
         )
         
@@ -391,7 +391,7 @@ def yurikorobot_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Bugs", url="t.me/IsabellaSupport"
+                            text="Bugs", url="t.me/EvieXSupport"
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="yurikorobot_back")],
@@ -478,7 +478,7 @@ def yurikorobot_about_callback(update, context):
             f"\n\n`2) then promote me as admin and give all permissions except anonymous admin.`"
             f"\n\n`3) add `@EvieXAssistant`to your group:`"
             f"\n\n`4) turn on the video chat first before start to play music.`"
-            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @IsabellaSupport*"
+            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @EvieXSupport*"
             f"\n\n*Powered By: Isabella Fam 💕*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -513,11 +513,11 @@ def yurikorobot_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Logs", url="t.me/EvieXLogs"),
-                    InlineKeyboardButton(text="News", url="t.me/IsabellaUpdate"),
+                    InlineKeyboardButton(text="News", url="t.me/EvieXUpdates"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/IsabellaSupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/IsabellaUpdate"),
+                    InlineKeyboardButton(text="Support", url="t.me/EvieXSupport"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/EvieXUpdates"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp"),
