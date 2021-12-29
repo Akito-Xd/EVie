@@ -313,33 +313,20 @@ def weebify(update: Update, context: CallbackContext):
 
 
 __help__ = """
-✗ /runs - `reply a random string from an array of replies`
-
-✗ /slap - `slap a user, or get slapped if not a reply`
-
-✗ /shrug - `get shrug XD`
-
-✗ /table - `get flip/unflip :v`
-
-✗ /decide - `Randomly answers yes/no/maybe`
-
-✗ /toss - `Tosses A coin`
-
-✗ /bluetext - `check urself :V`
-
-✗ /roll - `Roll a dice`
-
-✗ /rlg - `Join ears,nose,mouth and create an emo ;-;`
-
-✗ /shout - `<keyword> write anything you want to give loud shout`
-
-✗ /weebify - `<text> returns a weebified text`
-
-✗ /sanitize - `always use this before /pat or any contact`
-
-✗ /pat - `pats a user, or get patted`
-
-✗ /8ball - `predicts using 8ball method`
+/runs - `reply a random string from an array of replies`
+/slap - `slap a user, or get slapped if not a reply`
+/shrug - `get shrug XD`
+/table - `get flip/unflip :v`
+/decide - `Randomly answers yes/no/maybe`
+/toss - `Tosses A coin`
+/bluetext - `check urself :V`
+/roll - `Roll a dice`
+/rlg - `Join ears,nose,mouth and create an emo ;-;`
+/shout - `<keyword> write anything you want to give loud shout`
+/weebify - `<text> returns a weebified text`
+/sanitize - `always use this before /pat or any contact`
+/pat - `pats a user, or get patted`
+/8ball - `predicts using 8ball method`
 
 *Animation*
 ✗ /love 
@@ -347,27 +334,20 @@ __help__ = """
 ✗ /bombs 
 
 *Shippering*
-✗ /couples - `get couples of today`
+/couples - `get couples of today`
 
 *Here Is The Help For The Styletext Module:*
 
-✗ /weebify - `<text>: weebify your text!`
+/weebify - `<text>: weebify your text!`
+/bubble - `<text>: bubble your text!`
+/fbubble - `<text>: bubble-filled your text!`
+/square - `<text>: square your text!`
+/fsquare - `<text>: square-filled your text!`
+/blue - `<text>: bluify your text!`
+/latin - `<text>: latinify your text!`
+/lined - `<text>: lined your text!`
 
-✗ /bubble - `<text>: bubble your text!`
-
-✗ /fbubble - `<text>: bubble-filled your text!`
-
-✗ /square - `<text>: square your text!`
-
-✗ /fsquare - `<text>: square-filled your text!`
-
-✗ /blue - `<text>: bluify your text!`
-
-✗ /latin - `<text>: latinify your text!`
-
-✗ /lined - `<text>: lined your text!`
-
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: Tᴇᴀᴍ DᴇCᴏᴅᴇ!*
+*Powered By: Isabella Fam 💕*
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
@@ -400,7 +380,7 @@ dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 
-__mod_name__ = "Fᴜɴ"
+__mod_name__ = "Fun 🃏"
 __command_list__ = [
     "runs",
     "slap",
