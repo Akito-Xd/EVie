@@ -44,7 +44,7 @@ async def alive(_, message):
             [
                 [
                     InlineKeyboardButton(
-                        "Repo", url="https://GitHub.com/"), 
+                        "Repo", url="https://GitHub.com"), 
                     InlineKeyboardButton(
                         "Support", url="https://EvieXSupport")
                 ]
