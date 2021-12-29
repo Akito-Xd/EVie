@@ -164,6 +164,6 @@ async def job_open():
             logger.info(f"Unable To Open Group {pro.chat_id} - {e}")
 
 # Run everyday at 06
-scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
+scheduler = AsyncIOScheduler(timezone="Asia/Colombo")
 scheduler.add_job(job_open, trigger="cron", hour=5, minute=58)
 scheduler.start()
