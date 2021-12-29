@@ -593,7 +593,7 @@ eg:
 *Powered By: Isabella Fam 💕*
 """
 
-__mod_name__ = "Lᴏᴄᴋꜱ"
+__mod_name__ = "Locks 🔐"
 
 LOCKTYPES_HANDLER = DisableAbleCommandHandler("locktypes", locktypes, run_async=True)
 LOCK_HANDLER = CommandHandler(
