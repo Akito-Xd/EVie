@@ -34,7 +34,6 @@ from Yuriko import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Yuriko.modules.system import bot_sys_stats
 from Yuriko.modules import ALL_MODULES
 from Yuriko.modules.helper_funcs.chat_status import is_user_admin
 from Yuriko.modules.helper_funcs.misc import paginate_modules
