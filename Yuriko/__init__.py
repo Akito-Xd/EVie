@@ -70,6 +70,7 @@ if ENV:
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
+    bot_start_time = time.time()    
     INFOPIC = bool(os.environ.get("INFOPIC", True))
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
@@ -110,8 +111,8 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API_URL = "https://grambuilders.tech"
     ARQ_API_KEY = ARQ_API
-    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    bot_start_time = time.time()
+    
+    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)  
     
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
