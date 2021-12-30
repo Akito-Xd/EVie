@@ -380,10 +380,9 @@ def yurikorobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" *EvieX* - A bot to manage your groups with additional features!
-            \nHere the basic help regarding use of EvieXBot
-            
-            \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
+            text="""⚡️ EvieX is A bot to manage your groups with additional features! ⚡️
+            \n➮ Here the basic help regarding use of EvieXBot
+            \n➮ Almost all modules usage defined in the help menu, checkout by sending `/help`
             \nReport errors (Bugs) click the Button""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -416,9 +415,9 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"Here's basic Help regarding How to use Me? 🙋🏻‍♀️"
             
-            f"\n\n➮ Firstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\n➮ After adding promote me manually with full rights for faster experience\n"
-            f"\n➮ Then send `/admincache@EvieXBot` in that chat to refresh admin list in My database\n"
+            f"\n\n➮ Firstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)"
+            f"\n➮ After adding promote me manually with full rights for faster experience"
+            f"\n➮ Then send `/admincache@EvieXBot` in that chat to refresh admin list in My database"
             f"\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -441,10 +440,10 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_admin":
         query.message.edit_text(
-            text=f"*Let's Make Your Group Bit Effective Now 🙍🏻‍♀️*"
+            text=f"Let's Make Your Group Bit Effective Now 🙍🏻‍♀️"
             
             f"\nCongragulations, EvieXBot now ready to manage your group!"
-            f"\nAdmin Tools:"
+            f"\n\nAdmin Tools:"
             f"\n➮ Basic Admin tools help you to protect and powerup your group"
             f"\n➮ You can ban members, Kick members, Promote someone as admin through commands of bot"
             f"\n\nWelcome:"
@@ -461,7 +460,7 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"Setting Up Notes 📒"
             
-            f"\n➮ You can save message/media/audio or anything as notes"
+            f"\n\n➮ You can save message/media/audio or anything as notes"
             f"\n➮ To get a note simply use` # `at the beginning of a word"
             f"\n➮ You can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
@@ -490,7 +489,7 @@ def yurikorobot_about_callback(update, context):
             text=f"Let's Make Your Group Bit Effective Now 🙍🏻‍♀️"
             
             f"\nCongragulations, EvieXBot now ready to manage your group!"
-            f"\nAdmin Tools:"
+            f"\n\nAdmin Tools:"
             f"\n➮ Basic Admin tools help you to protect and powerup your group"
             f"\n➮ You can ban members, Kick members, Promote someone as admin through commands of bot"
             f"\n\nWelcome:"
@@ -503,9 +502,9 @@ def yurikorobot_about_callback(update, context):
         )    
     elif query.data == "yurikorobot_support":
         query.message.edit_text(
-            text="*EvieX Support Chats*"
+            text="EvieX Support Chats"
             
-            "\n\n`Join Support Group/Channel`",
+            "\n\nJoin Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
