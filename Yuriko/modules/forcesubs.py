@@ -199,8 +199,8 @@ Commmands:
 ➮ /fsub - To get the current settings
 ➮ /fsub - disable To turn of ForceSubscribe..
 
-  💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
-
+  💡If you disable fsub, you need to set again your fsub channel
+  
 ➮ /fsub clear - To unmute all members who muted by me
 
 Federation:
