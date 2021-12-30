@@ -91,7 +91,7 @@ PM_START_TEXT = """
 ⌦ `{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
 ⌦ *Uptime ⏰:* `{}`
 
-⌦ *Powered By @TeamEvieX*
+© *Powered By @TeamEvieX*
 """
 
 buttons = [
@@ -118,7 +118,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-*Main Commands*
+*Main Commands 🛠*
 
 ➮ /start - Starts me! Your probably already used this
 ➮ /help - Click this I ll let you know about myself!
@@ -325,7 +325,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "`Here Is The Help`「*{}*」 `Module:`\n".format(
+                "Here Is The Help For *{}* ⚡️ Module:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -381,11 +381,11 @@ def yurikorobot_about_callback(update, context):
     query = update.callback_query
     if query.data == "yurikorobot_":
         query.message.edit_text(
-            text=""" *EvieX* - `A bot to manage your groups with additional features!`
-            \n`Here the basic help regarding use of EvieXBot.`
+            text=""" *EvieX* - A bot to manage your groups with additional features!
+            \nHere the basic help regarding use of EvieXBot
             
-            \n`Almost all modules usage defined in the help menu, checkout by sending` `/help`
-            \n`Report errors (Bugs) click the Button`""",
+            \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
+            \nReport errors (Bugs) click the Button""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -417,9 +417,9 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
             
-            f"\n\n`Firstly Add` {dispatcher.bot.first_name} `to your group by pressing` [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\n`After adding promote me manually with full rights for faster experience.`\n"
-            f"\n`Than send` `/admincache@EvieXBot` `in that chat to refresh admin list in My database.`\n"
+            f"\n\nFirstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\nAfter adding promote me manually with full rights for faster experience\n"
+            f"\nThan send `/admincache@EvieXBot` in that chat to refresh admin list in My database\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -490,13 +490,13 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Let's Make Your Group Bit Effective Now*"
             
-            f"\n`Congragulations, EvieXBot now ready to manage your group.`"
+            f"\nCongragulations, EvieXBot now ready to manage your group"
             f"\n\n*Admin Tools*"
-            f"\n`Basic Admin tools help you to protect and powerup your group.`"
-            f"\n`You can ban members, Kick members, Promote someone as admin through commands of bot.`"
+            f"\nBasic Admin tools help you to protect and powerup your group"
+            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot"
             f"\n\n*Welcome*"
-            f"\n`Lets set a welcome message to welcome new users coming to your group.`"
-            f"\n`Send` `/setwelcome [message]` `to set a welcome message!`",
+            f"\nLets set a welcome message to welcome new users coming to your group"
+            f"\nSend `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -626,7 +626,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "Here is the available help for the *{}* ⚡️ module:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
