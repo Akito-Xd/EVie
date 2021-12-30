@@ -249,7 +249,7 @@ def start(update: Update, context: CallbackContext):
                 uptime
             ),
             parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup
+            reply_markup=InlineKeyboardMarkup(
                 [
                   [
                     InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback"),
