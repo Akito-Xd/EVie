@@ -141,9 +141,9 @@ __help__ = """
 
 Chatbot utilizes the *kuki* api which allows EvieX to talk and provide a more interactive group chat experience
 
-*Admins only Commands*:
+Admins only Commands:
  
-➮ /Chatbot - `Shows chatbot control panel`
+➮ /Chatbot - Shows chatbot control panel
   
 """
 
