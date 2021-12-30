@@ -12,6 +12,7 @@ from typing import Optional
 from pyrogram import filters, idle
 from telegram import __version__ as peler
 from platform import python_version as memek
+from Yuriko import pbot
 from Yuriko import (
     ALLOW_EXCL,
     CERT_PATH,
@@ -27,7 +28,6 @@ from Yuriko import (
     dispatcher,
     StartTime,
     telethn,
-    pbot,
     updater,
 )
 
@@ -249,17 +249,24 @@ def start(update: Update, context: CallbackContext):
                 uptime
             ),
             parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
+            reply_markup=InlineKeyboardMarkup
                 [
                   [
-                    InlineKeyboardButton(text="Support 👮‍♂", url="t.me/EvieXSupport"),
+                    InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback"),
                   ],
                   [  
-                    InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback"),
+                    InlineKeyboardButton(text="Support 👮‍♂", url="t.me/EvieXSupport"),
                   ]
                 ]    
             ),
         )
+        
+        
+@pbot.on_callback_query(filters.regex("stats_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = await bot_sys_stats()
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -556,12 +563,6 @@ def yurikorobot_about_callback(update, context):
             ),
         )
  
-
-@pbot.on_callback_query(filters.regex("stats_callback"))
-async def stats_callbacc(_, CallbackQuery):
-    text = await bot_sys_stats()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
-
 
 def Source_about_callback(update, context):
     query = update.callback_query
