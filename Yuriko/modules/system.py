@@ -13,7 +13,6 @@ from Yuriko.utils import formatter
 # Stats Module
 
 async def bot_sys_stats():
-    bot_uptime = int(time.time() - bot_start_time)
     cpu = psutil.cpu_percent()
     mem = psutil.virtual_memory().percent
     disk = psutil.disk_usage("/").percent
