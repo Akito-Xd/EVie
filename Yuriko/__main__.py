@@ -9,7 +9,7 @@ import traceback
 import Yuriko.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
-from pyrogram import filters, idle
+from pyrogram import filters,idle
 from telegram import __version__ as peler
 from platform import python_version as memek
 from Yuriko import pbot
@@ -261,12 +261,6 @@ def start(update: Update, context: CallbackContext):
             ),
         )
         
-        
-@pbot.on_callback_query(filters.regex("stats_callback"))
-async def stats_callbacc(_, CallbackQuery):
-    text = await bot_sys_stats()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
-
         
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -588,8 +582,14 @@ def Source_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
+        
 
-
+@pbot.on_callback_query(filters.regex("stats_callback"))
+async def stats_callbacc(_, CallbackQuery):
+    text = await bot_sys_stats()
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    
+        
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     args = update.effective_message.text.split(None, 1)
