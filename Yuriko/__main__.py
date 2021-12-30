@@ -90,7 +90,6 @@ PM_START_TEXT = """
 ⌦ *Uptime ⏰:* `{}`
 ⌦ `{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
 
-
 © *Powered By @TeamEvieX*
 """
 
