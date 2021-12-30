@@ -243,13 +243,13 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_photo(
-            EVIE_STICKER, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+        update.effective_message.reply_text(
+            "I'm awake already 😴!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Support 👮‍♂", url="t.me/EvieXSupport")]]
+                [[InlineKeyboardButton(text="Support 👮‍♂", url="t.me/EvieXSupport")]],
             ),
         )
         
