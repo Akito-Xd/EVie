@@ -32,32 +32,33 @@ from Yuriko.modules.helper_funcs.chat_status import sudo_plus
 from Yuriko.modules.helper_funcs.alternate import send_action, typing_action
 
 MARKDOWN_HELP = f"""
-Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
-saved messages are correctly parsed, and to allow you to create buttons.
+Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that 
+saved messages are correctly parsed, and to allow you to create buttons
 
-<code>_italic_</code> - `wrapping text with '_' will produce italic text`
+➮ <code>_italic_</code> - wrapping text with '_' will produce italic text
 
-<code>*bold*</code> - `wrapping text with '*' will produce bold text`
+➮ <code>*bold*</code> - wrapping text with '*' will produce bold text
 
-<code>`code`</code> - `wrapping text with '`' will produce monospaced text, also known as code`
+➮ <code>`code`</code> - wrapping text with '`' will produce monospaced text, also known as code
 
-<code>[sometext](someURL)</code> - `this will create a link - the message will just show <code>sometext</code>, \
+➮ <code>[sometext](someURL)</code> - this will create a link - the message will just show <code>sometext</code>,
 and tapping on it will open the page at <code>someURL</code>.
-<b>Example:</b><code>[test](example.com)</code>`
+<b>Example:</b><code>[test](example.com)</code>
 
-<code>[buttontext](buttonurl - `someURL)</code>: this is a special enhancement to allow users to have telegram \
-buttons in their markdown. <code>buttontext</code> will be what is displayed on the button, and <code>someurl</code> \
-will be the url which is opened.`
+➮ <code>[buttontext](buttonurl - `someURL)</code>: this is a special enhancement to allow users to have telegram 
+buttons in their markdown. <code>buttontext</code> will be what is displayed on the button, and <code>someurl</code> 
+will be the url which is opened
 <b>Example:</b> <code>[This is a button](buttonurl - `example.com)</code>`
 
-`If you want multiple buttons on the same line, use :same, as such:`
+➮ If you want multiple buttons on the same line, use :same, as such:
 
-`<code>[one](buttonurl://example.com)`
-`[two](buttonurl://google.com:same)</code>`
+<code>[one](buttonurl://example.com)
+[two](buttonurl://google.com:same)</code>
 
-`This will create two buttons on a single line, instead of one button per line.`
+This will create two buttons on a single line, instead of one button per line
 
-`Keep in mind that your message <b>MUST</b> contain some text other than just a button!`
+
+Keep in mind that your message <b>MUST</b> contain some text other than just a button!
 """
 
 
@@ -187,16 +188,16 @@ def wall(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*Available commands:*
+Available commands:
 
-/markdownhelp - `quick summary of how markdown works in telegram - can only be called in private chats`
-/paste - `Saves replied content to `nekobin.com` and replies with a url`
-/react - `Reacts with a random reaction` 
-/ud <word> - `Type the word or expression you want to search use`
-/reverse - `Does a reverse image search of the media which it was replied to.`
-/wiki <query> - `wikipedia your query`
-/wall <query> - `get a wallpaper from wall.alphacoders.com`
-/cash - `currency converter`
+➮ /markdownhelp - quick summary of how markdown works in telegram - can only be called in private chats
+➮ /paste - Saves replied content to `nekobin.com` and replies with a url
+➮ /react - Reacts with a random reaction
+➮ /ud <word> - Type the word or expression you want to search use
+➮ /reverse - Does a reverse image search of the media which it was replied to
+➮ /wiki <query> - wikipedia your query
+➮ /wall <query> - get a wallpaper from wall.alphacoders.com
+➮ /cash - currency converter
 
  Example:
 
@@ -209,13 +210,12 @@ __help__ = """
  Output: `1.0 USD = 75.505 INR`
 
 
-*Music Modules:*
+Music Modules:
 
-/video or /vsong (query) - `download video from youtube`
-/song (query)- `download song from yt servers. (API BASED)`
-/lyrics (song name) - `This plugin searches for song lyrics with song name.`
+➮ /video or /vsong (query) - download video from youtube
+➮ /song (query)- download song from yt servers. (API BASED)
+➮ /lyrics (song name) - This plugin searches for song lyrics with song name
 
-*Powered By: Isabella Fam 💕*
 """
 
 ECHO_HANDLER = DisableAbleCommandHandler(
