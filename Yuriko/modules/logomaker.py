@@ -212,12 +212,11 @@ __mod_name__ = "Logo Maker 📥"
 
 __help__ = """
 
-/logo - `<text/name> Create a logo with random view.`
-/wlogo - `<text/name> Create a logo with wide view only.`
+➮ /logo - <text/name> Create a logo with random view
+➮ /wlogo - <text/name> Create a logo with wide view only
 
- *Image Editor :*
+Image Editor:
 
-/edit - `<reply photo> to edit image.`
+➮ /edit - <reply photo> to edit image
 
-*Powered By: Isabella Fam 💕*
 """
