@@ -7,7 +7,7 @@ import psutil
 import Yuriko.modules.sql.users_sql as sql
 from pyrogram import filters
 
-from Yuriko import (bot_start_time, DEV_USERS, pbot)
+from Yuriko import (DEV_USERS, pbot)
 from Yuriko.utils import formatter
 
 # Stats Module
