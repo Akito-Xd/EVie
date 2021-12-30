@@ -479,7 +479,7 @@ def yurikorobot_about_callback(update, context):
             f"\n\n2) then promote me as admin and give all permissions except anonymous admin"
             f"\n\n3) add @EvieXAssistant to your group"
             f"\n\n4) turn on the video chat first before start to play music"
-            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @EvieXSupport*,
+            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @EvieXSupport*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
