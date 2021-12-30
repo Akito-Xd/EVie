@@ -190,7 +190,7 @@ Only creator:
 ➮ First Add me in your group as admin
 ➮ Add me in your channel as admin
  
-Commmands:*
+Commmands:
 
 ➮ /fsub `{channel username}` To turn on and setup the channel
 
