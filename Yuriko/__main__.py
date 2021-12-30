@@ -414,7 +414,7 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_basichelp":
         query.message.edit_text(
-            text=f"Here's basic Help regarding How to use Me? 🙋🏻‍♀️*"
+            text=f"Here's basic Help regarding How to use Me? 🙋🏻‍♀️"
             
             f"\n\n➮ Firstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n➮ After adding promote me manually with full rights for faster experience\n"
