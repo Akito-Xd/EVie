@@ -1,4 +1,8 @@
 # Taken From https://github.com/AASFCYBERKING/SerenaRobot/blob/Aasf/SerenaRobot/modules/alive.py
+from platform import python_version as y
+from telegram import __version__ as o
+from pyrogram import __version__ as z
+from telethon import __version__ as s
 import asyncio
 import os
 import requests
