@@ -139,7 +139,7 @@ def list_all_chats(update: Update, context: CallbackContext):
 
 __help__ = """
 
-Chatbot utilizes the *EvieX* api which allows EvieX to talk and provide a more interactive group chat experience
+Chatbot utilizes the *kuki* api which allows EvieX to talk and provide a more interactive group chat experience
 
 *Admins only Commands*:
  
