@@ -84,12 +84,12 @@ EVIE_STICKER= "https://telegra.ph/file/d1df93a4e47f3691cffdc.jpg"
 PM_START_TEXT = """
 *👋 Hello {} !*
 
-*I'm EvieX Poweful & Stable Robot To Manage Your Groups *
+*I'm EvieX Poweful & Stable Robot To Manage Your Groups 🙋🏻‍♀️*
 
 〄 My Current Stats 🧘
-
-⌦ `{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
 ⌦ *Uptime ⏰:* `{}`
+⌦ `{}` *Users 🙍‍♂️ Across* `{}` *Chats 💭*
+
 
 © *Powered By @TeamEvieX*
 """
