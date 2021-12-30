@@ -16,11 +16,11 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 edit_time = 5
 """ =======================EvieX====================== """
-file1 = "https://telegra.ph/file/1ad7188c8390b5c36b9a8.jpg"
-file2 = "https://telegra.ph/file/73fc670e1dc78d1857b67.jpg"
-file3 = "https://telegra.ph/file/4b29739e7fd46b2111e55.jpg"
-file4 = "https://telegra.ph/file/956b7a50ec1f0a9802b8b.jpg"
-file5 = "https://telegra.ph/file/2fdff4fc6f3e015eb9a51.jpg"
+file1 = "https://telegra.ph/file/5820ee6c948bcaf82dbec.jpg"
+file2 = "https://telegra.ph/file/8da11336779e87582e36a.jpg"
+file3 = "https://telegra.ph/file/863218f1bbda29ae26104.jpg"
+file4 = "https://telegra.ph/file/503f0f8897ce693c0d935.jpg"
+file5 = "https://telegra.ph/file/d1df93a4e47f3691cffdc.jpg"
 """ =======================Eviex====================== """
 
 BUTTON = [[Button.url("Sopport 👮‍♂️", "https://t.me/EvieXSupport"), Button.url("Updates 🆕", "https://t.me/EvieXUpdates")]]
