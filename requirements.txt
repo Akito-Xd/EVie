@@ -1,4 +1,5 @@
 future
+psutil
 emoji
 lxml
 wget
