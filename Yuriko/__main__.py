@@ -9,7 +9,6 @@ import traceback
 import Yuriko.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
-from pyrogram import filters,idle
 from telegram import __version__ as peler
 from platform import python_version as memek
 from Yuriko import pbot
@@ -37,7 +36,6 @@ from Yuriko import (
 from Yuriko.modules import ALL_MODULES
 from Yuriko.modules.helper_funcs.chat_status import is_user_admin
 from Yuriko.modules.helper_funcs.misc import paginate_modules
-from Yuriko.modules.system import bot_sys_stats
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -246,19 +244,12 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already 😴\nHaven't slept since: <code>{}</code>".format(
+            "Heya I'm at Your Service 😴\nHaven't slept since: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [
-                  [
-                    InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback"),
-                  ],
-                  [  
-                    InlineKeyboardButton(text="Support 👮‍♂", url="t.me/EvieXSupport"),
-                  ]
-                ]    
+               [[InlineKeyboardButton(text="Support 🆘", url="t.me/EvieXupport")]]
             ),
         )
         
@@ -774,13 +765,7 @@ def settings_button(update: Update, context: CallbackContext):
         ]:
             LOGGER.exception("Exception in settings buttons. %s", str(query.data))
             
-
-@pbot.on_callback_query(filters.regex("stats_callback"))
-async def stats_callback(_, CallbackQuery):
-    text = await bot_sys_stats()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
-    
-
+            
 def get_settings(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
