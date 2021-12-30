@@ -583,11 +583,13 @@ def Source_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-        
- @pbot.on_callback_query(filters.regex("stats_callback"))
+ 
+
+@pbot.on_callback_query(filters.regex("stats_callback"))
 async def stats_callbacc(_, CallbackQuery):
     text = await bot_sys_stats()
-    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)       
+    await pbot.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    
         
  def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
