@@ -110,7 +110,6 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API_URL = "https://grambuilders.tech"
     ARQ_API_KEY = ARQ_API
-  
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     bot_start_time = time.time()
     
