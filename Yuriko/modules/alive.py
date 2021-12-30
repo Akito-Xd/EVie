@@ -59,8 +59,8 @@ async def hmm(yes):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     pm_caption = "**✨ Hey I'm EvieX**\n\n"
-    pm_caption += f"🧑‍💻 Powered By : [TeamEvieX](https://t.me/TeamEvieX)"
-    pm_caption += f"🐍 Python Version :** `{y()}`"
+    pm_caption += f"🧑‍💻 Powered By : [TeamEvieX](https://t.me/TeamEvieX)\n"
+    pm_caption += f"🐍 Python Version :** `{y()}`\n"
     pm_caption += f"📃 Library Version :** `{o}1\n"
     pm_caption += f"♻️ Telethon Version :** `{s}`\n"
     pm_caption += f"💥 Pyrogram Version :** `{z}`\n"
