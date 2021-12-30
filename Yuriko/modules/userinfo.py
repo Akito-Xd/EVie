@@ -538,11 +538,11 @@ def __user_info__(user_id):
 
 
 __help__ = """
-*ID:*
+ID:
 ➮ /id - get the current group id. If used by replying to a message, gets that user's id
 ➮ /gifid - reply to a gif to me to tell you its file ID
  
-*Self addded information:* 
+Self addded information: 
 
 ➮ /setme - <text> will set your info
 ➮ /me - will get your or another user's info
@@ -552,34 +552,33 @@ Examples:
 ➮ /setme - I am a *EvieX* User
 ➮ /me - @username (defaults to yours if no user specified)
  
-*Information others add on you:* 
+Information others add on you:
 
 ➮ /bio - will get your or another user's bio. This cannot be set by yourself
 ➮ /setbio - <text> while replying, will save another user's bio
 
-*Examples:*
+Examples:
 
 ➮ /bio - @username (defaults to yours if not specified)
 ➮ /setbio - This user is a *EvieX* User (reply to the user)
  
-*Overall Information about you:*
+Overall Information about you:
 
 ➮ /info - get information about a user
  
-*json Detailed info:*
+json Detailed info:
 
 ➮ /json - Get Detailed info about any message
  
-*AFk:*
+Afk:
 
-`When marked as AFK, any mentions will be replied to with a message stating that you're not available!`
+When marked as AFK, any mentions will be replied to with a message stating that you're not available!
 
 ➮ /afk - <reason> Mark yourself as AFK
 ➮ /brb - <reason> Same as the afk command, but not a command
 
-*What is that health thingy?*
-
- Come and see [HP System explained](https://t.me/TeamEvieX)
+⍣ What is that health thingy?
+Come and see [HP System explained 📈](https://t.me/YurikoLogger/5)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
