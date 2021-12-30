@@ -200,19 +200,18 @@ __help__ = """
 
 *Admin commands:*
 
-/approval - `Check a user's approval status in this chat.`
-/approve - `Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.`
-/unapprove - `Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.`
-/approved - `List all approved users.`
-/unapproveall - `Unapprove `*ALL* `users in a chat. This cannot be undone.`
+➮ /approval - Check a user's approval status in this chat
+➮ /approve - Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore
+➮ /unapprove - Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again
+➮ /approved - List all approved users
+➮ /unapproveall - Unapprove *ALL* users in a chat. This cannot be undone ⚠️
 
 *Anti-Channel:*
 
-/addfreelist [channel_id] - `add channel into whitelist and protect channel for automatic actions.`
-/delfreelist [channel_id] - `remove channel from whitelist.`
-/showfreelist - `show all white list channels.`
+➮ /addfreelist <channel_id> - add channel into whitelist and protect channel for automatic actions
+➮ /delfreelist <channel_id> - remove channel from whitelist
+➮ /showfreelist - show all white list channels
 
-*Powered By: Isabella Fam 💕*
 """
 
 APPROVE = DisableAbleCommandHandler("approve", approve, run_async=True)
