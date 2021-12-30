@@ -607,16 +607,16 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-/filters - `List all active filters saved in the chat.`
+➮ /filters - List all active filters saved in the chat
 
 *Admin Commands Only:*
 
-/filter - `Add a filter to this chat. The bot will now reply that message whenever 'keyword'\`
-`is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker.`
+➮ /filter - Add a filter to this chat. The bot will now reply that message whenever *keyword*
+is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker
 
-*NOTE:* `all filter`
-`keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg:` /filter *hey there* `How you`
-`doin? Separate diff replies by `%%%` to get random replies`
+*NOTE:* all filter
+keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: `/filter *hey there*` `How you
+doin?` Separate diff replies by `%%%` to get random replies
  
  *Example:* 
  `/filter "filtername"
@@ -626,17 +626,16 @@ __help__ = """
  %%%
  Reply 3`
 
-/stop - `Stop that filter.`
+➮ /stop - Stop that filter
 
 *Chat Creator Only:*
 
-/removeallfilters - `Remove all chat filters at once.`
+➮ /removeallfilters - Remove all chat filters at once
 
-*NOTE*: `Filters also support markdown formatters like: {first}, {last} etc.. and buttons.`
+*NOTE*: Filters also support markdown formatters like: {first}, {last} etc.. and buttons
 
-`Check /markdownhelp to know more!`
+Check `/markdownhelp` to know more!
 
-*Powered By: Isabella Fam 💕*
 """
 
 __mod_name__ = "Filters 📁"
