@@ -58,12 +58,12 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    pm_caption = "**✨ Hey I'm EvieX**\n"
+    pm_caption = "**✨ Hey I'm EvieX**\n\n"
     pm_caption += f"🧑‍💻 Powered By : [TeamEvieX](https://t.me/TeamEvieX)"
     pm_caption += f"🐍 Python Version :** `{y()}`"
-    pm_caption += f"📃 Library Version :** `{o}1"
-    pm_caption += f"♻️ Telethon Version :** `{s}`"
-    pm_caption += f"💥 Pyrogram Version :** `{z}`"
+    pm_caption += f"📃 Library Version :** `{o}1\n"
+    pm_caption += f"♻️ Telethon Version :** `{s}`\n"
+    pm_caption += f"💥 Pyrogram Version :** `{z}`\n"
     BUTTON = [[Button.url("Sopport 👮‍♂️", "https://t.me/EvieXSupport"), Button.url("Updates 🆕", "https://t.me/EvieXUpdates")]]
     on = await borg.send_file(yes.chat_id, file=file1,caption=pm_caption, buttons=BUTTON)
     
