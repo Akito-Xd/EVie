@@ -37,7 +37,7 @@ from Yuriko import (
 from Yuriko.modules import ALL_MODULES
 from Yuriko.modules.helper_funcs.chat_status import is_user_admin
 from Yuriko.modules.helper_funcs.misc import paginate_modules
-from Turiko.modules.system import bot_sys_stats
+from Yuriko.modules.system import bot_sys_stats
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
