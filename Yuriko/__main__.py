@@ -429,7 +429,7 @@ def yurikorobot_about_callback(update, context):
             f"\n\n➮ Firstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)"
             f"\n➮ After adding promote me manually with full rights for faster experience"
             f"\n➮ Then send `/admincache@EvieXBot` in that chat to refresh admin list in My database"
-            f"\n*All done now use below given button's to know about use!*\n"
+            f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
