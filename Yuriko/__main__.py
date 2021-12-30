@@ -243,7 +243,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already 😴!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I'm awake already 😴\nHaven't slept since: <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -324,7 +324,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here Is The Help For *{}* ⚡️ Module:\n".format(
+                "Here Is The Help For *{}* Module:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -414,12 +414,12 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_basichelp":
         query.message.edit_text(
-            text=f"*Here's basic Help regarding* *How to use Me?*"
+            text=f"Here's basic Help regarding How to use Me? 🙋🏻‍♀️*"
             
-            f"\n\nFirstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
-            f"\nAfter adding promote me manually with full rights for faster experience\n"
-            f"\nThan send `/admincache@EvieXBot` in that chat to refresh admin list in My database\n"
-            f"\n\n*All done now use below given button's to know about use!*\n"
+            f"\n\n➮ Firstly Add {dispatcher.bot.first_name} to your group by pressing [Here 💏](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
+            f"\n➮ After adding promote me manually with full rights for faster experience\n"
+            f"\n➮ Then send `/admincache@EvieXBot` in that chat to refresh admin list in My database\n"
+            f"\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -441,15 +441,15 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_admin":
         query.message.edit_text(
-            text=f"*Let's Make Your Group Bit Effective Now*"
+            text=f"*Let's Make Your Group Bit Effective Now 🙍🏻‍♀️*"
             
-            f"\n Congragulations, EvieXBot now ready to manage your group"
-            f"\n\n*Admin Tools*"
-            f"\nBasic Admin tools help you to protect and powerup your group"
-            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot"
-            f"\n\n*Welcome*"
-            f"\nLets set a welcome message to welcome new users coming to your group"
-            f"\nSend `/setwelcome [message]` to set a welcome message!",
+            f"\nCongragulations, EvieXBot now ready to manage your group!"
+            f"\nAdmin Tools:"
+            f"\n➮ Basic Admin tools help you to protect and powerup your group"
+            f"\n➮ You can ban members, Kick members, Promote someone as admin through commands of bot"
+            f"\n\nWelcome:"
+            f"\n➮ Lets set a welcome message to welcome new users coming to your group"
+            f"\n➮ Send `/setwelcome [message]` to set a welcome message!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -459,11 +459,11 @@ def yurikorobot_about_callback(update, context):
 
     elif query.data == "yurikorobot_notes":
         query.message.edit_text(
-            text=f"<b> Setting Up Notes</b>"
+            text=f"Setting Up Notes 📒"
             
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nTo get a note simply use` # `at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            f"\n➮ You can save message/media/audio or anything as notes"
+            f"\n➮ To get a note simply use` # `at the beginning of a word"
+            f"\n➮ You can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
@@ -473,12 +473,12 @@ def yurikorobot_about_callback(update, context):
         query.message.edit_text(
             text=f"*Here Is The Help For Assistant Module:*"
             
-            f"\n*SETUP ASSISTANT*"
-            f"\n\n1) first, add me to your group"
-            f"\n\n2) then promote me as admin and give all permissions except anonymous admin"
-            f"\n\n3) add @EvieXAssistant to your group"
-            f"\n\n4) turn on the video chat first before start to play music"
-            f"\n\n*Lets Enjoy The EvieX Music And Join Support Group @EvieXSupport*",
+            f"\nSetup Assistant 🙎🏻‍♂️"
+            f"\n\n➮ first, add me to your group"
+            f"\n➮ then promote me as admin and give all permissions except anonymous admin"
+            f"\n➮ add @EvieXAssistant to your group"
+            f"\n➮ turn on the video chat first before start to play music"
+            f"\n\nLets Enjoy The EvieX Music And Join Support Group @EvieXSupport",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -487,16 +487,15 @@ def yurikorobot_about_callback(update, context):
         )
     elif query.data == "yurikorobot_admin":
         query.message.edit_text(
-            text=f"*Let's Make Your Group Bit Effective Now*"
+            text=f"Let's Make Your Group Bit Effective Now 🙍🏻‍♀️"
             
-            f"\nCongragulations, EvieXBot now ready to manage your group"
-            f"\n\n*Admin Tools*"
-            f"\nBasic Admin tools help you to protect and powerup your group"
-            f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot"
-            f"\n\n*Welcome*"
-            f"\nLets set a welcome message to welcome new users coming to your group"
-            f"\nSend `/setwelcome [message]` to set a welcome message!",
-            parse_mode=ParseMode.MARKDOWN,
+            f"\nCongragulations, EvieXBot now ready to manage your group!"
+            f"\nAdmin Tools:"
+            f"\n➮ Basic Admin tools help you to protect and powerup your group"
+            f"\n➮ You can ban members, Kick members, Promote someone as admin through commands of bot"
+            f"\n\nWelcome:"
+            f"\n➮ Lets set a welcome message to welcome new users coming to your group"
+            f"\n➮ Send `/setwelcome [message]` to set a welcome message!",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="yurikorobot_basichelp")]]
@@ -625,7 +624,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* ⚡️ module:\n".format(
+            "Here is the available help for the *{}* module:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
