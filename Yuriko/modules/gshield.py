@@ -1,6 +1,7 @@
 import asyncio
 import os
 import re
+
 import better_profanity
 import emoji
 import nude
@@ -9,17 +10,22 @@ from better_profanity import profanity
 from google_trans_new import google_translator
 from telethon import events
 from telethon.tl.types import ChatBannedRights
-from Yuriko.confing import get_int_key, get_str_key
-from Yuriko.services.telethonbasics import is_admin
+
+from Yuriko import BOT_ID
+from Yuriko.conf import get_int_key, get_str_key
+
+# from innexiaBot.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
+from Yuriko.pyrogramee.telethonbasics import is_admin
 from Yuriko.events import register
+from Yuriko import MONGO_DB_URI 
 from pymongo import MongoClient
-from Yuriko.modules.sql.nsfw_watch_sql import (
+from Yuriko.modules.sql_extended.nsfw_watch_sql import (
     add_nsfwatch,
     get_all_nsfw_enabled_chat,
     is_nsfwatch_indb,
     rmnsfwatch,
 )
-from Yuriko import telethn as tbot, MONGO_DB_URI, BOT_ID
+from Yuriko import telethn as tbot
 
 translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
@@ -28,7 +34,7 @@ MONGO_DB_URI = get_str_key("MONGO_DB_URI")
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["LaylaRobot"]
+db = client["Yuriko"]
 
 async def is_nsfw(event):
     lmao = event
@@ -109,11 +115,103 @@ async def nsfw_watch(event):
         return
 
 
+@tbot.on(events.NewMessage())
+async def ws(event):
+    warner_starkz = get_all_nsfw_enabled_chat()
+    if len(warner_starkz) == 0:
+        return
+    if not is_nsfwatch_indb(str(event.chat_id)):
+        return
+    if not (event.photo):
+        return
+    if not await is_admin(event, BOT_ID):
+        return
+    if await is_admin(event, event.message.sender_id):
+        return
+    sender = await event.get_sender()
+    await event.client.download_media(event.photo, "nudes.jpg")
+    if nude.is_nude("./nudes.jpg"):
+        await event.delete()
+        st = sender.first_name
+        hh = sender.id
+        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Innexia deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})  \n\n`⚔️Automatic Detections Powered By Innexia AI` \n**#GROUP_GUARDIAN** "
+        dev = await event.respond(final)
+        await asyncio.sleep(10)
+        await dev.delete()
+        os.remove("nudes.jpg")
+
+
+"""
+@pbot.on_message(filters.command("nsfwguardian") & ~filters.edited & ~filters.bot)
+async def add_nsfw(client, message):
+    if len(await member_permissions(message.chat.id, message.from_user.id)) < 1:
+        await message.reply_text("**You don't have enough permissions**")
+        return
+    status = message.text.split(None, 1)[1] 
+    if status == "on" or status == "ON" or status == "enable":
+        pablo = await message.reply("`Processing..`")
+        if is_chat_in_db(message.chat.id):
+            await pablo.edit("This Chat is Already In My DB")
+            return
+        me = await client.get_me()
+        add_chat(message.chat.id)
+        await pablo.edit("Successfully Added Chat To NSFW Watch.")
+        
+    elif status == "off" or status=="OFF" or status == "disable":
+        pablo = await message.reply("`Processing..`")
+        if not is_chat_in_db(message.chat.id):
+            await pablo.edit("This Chat is Not in dB.")
+            return
+        rm_chat(message.chat.id)
+        await pablo.edit("Successfully Removed Chat From NSFW Watch service")
+    else:
+        await message.reply(" I undestand only `/nsfwguardian on` or `/nsfwguardian off` only")
+        
+@pbot.on_message(filters.incoming & filters.media & ~filters.private & ~filters.channel & ~filters.bot)
+async def nsfw_watch(client, message):
+    lol = get_all_nsfw_chats()
+    if len(lol) == 0:
+        message.continue_propagation()
+    if not is_chat_in_db(message.chat.id):
+        message.continue_propagation()
+    hot = await is_nsfw(client, message)
+    if not hot:
+        message.continue_propagation()
+    else:
+        try:
+            await message.delete()
+        except:
+            pass
+        lolchat = await client.get_chat(message.chat.id)
+        ctitle = lolchat.title
+        if lolchat.username:
+            hehe = lolchat.username
+        else:
+            hehe = message.chat.id
+        midhun = await client.get_users(message.from_user.id)
+        await message.delete()
+        if midhun.username:
+            Escobar = midhun.username
+        else:
+            Escobar = midhun.id
+        await client.send_message(
+            message.chat.id,
+            f"**NSFW DETECTED**\n\n{hehe}'s message contain NSFW content.. So, Innexia deleted the message\n\n **Nsfw Sender - User / Bot :** `{Escobar}` \n**Chat Title:** `{ctitle}` \n\n`⚔️Automatic Detections Powered By InnexiaAI` \n**#GROUP_GUARDIAN** ",
+        )
+        message.continue_propagation()
+"""
+
+
+# This Module is ported from https://github.com/MissJuliaRobot/MissJuliaRobot
+# This hardwork was completely done by MissJuliaRobot
+# Full Credits goes to MissJuliaRobot
+
+
 approved_users = db.approve
 spammers = db.spammer
 globalchat = db.globchat
 
-CMD_STARTERS = ["/", "!", "."]
+CMD_STARTERS = "/"
 profanity.load_censor_words_from_file("./profanity_wordlist.txt")
 
 
@@ -314,5 +412,7 @@ async def del_profanity(event):
                     dev = await event.respond(final)
                     await asyncio.sleep(10)
                     await dev.delete()
+#
+
 
 __mod_name__ = "Shield"
