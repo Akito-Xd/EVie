@@ -337,6 +337,11 @@ if is_module_loaded(FILENAME):
     dispatcher.add_handler(COMMANDS_HANDLER)
     dispatcher.add_handler(TOGGLE_HANDLER)
     
+
+else:
+    DisableAbleCommandHandler = CommandHandler
+    DisableAbleRegexHandler = RegexHandler
+    DisableAbleMessageHandler = MessageHandler
     
 __help__ = """
 
@@ -352,9 +357,3 @@ Admins only:
 """
 
 __mod_name__ = "Disabling ❗️"
-
-    
-else:
-    DisableAbleCommandHandler = CommandHandler
-    DisableAbleRegexHandler = RegexHandler
-    DisableAbleMessageHandler = MessageHandler
