@@ -12,10 +12,10 @@ from telethon import events
 from telethon.tl.types import ChatBannedRights
 
 from Yuriko import BOT_ID
-from Yuriko.conf import get_int_key, get_str_key
+from Yuriko.confing import get_int_key, get_str_key
 
 # from innexiaBot.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
-from Yuriko.pyrogramee.telethonbasics import is_admin
+from Yuriko.services.telethonbasics import is_admin
 from Yuriko.events import register
 from Yuriko import MONGO_DB_URI 
 from pymongo import MongoClient
