@@ -11,7 +11,7 @@ from google_trans_new import google_translator
 from telethon import events
 from telethon.tl.types import ChatBannedRights
 
-from Yuriko.init import BOT_ID
+from Yuriko import BOT_ID
 from Yuriko.confing import get_int_key, get_str_key
 
 # from innexiaBot.db.mongo_helpers.nsfw_guard import add_chat, get_all_nsfw_chats, is_chat_in_db, rm_chat
