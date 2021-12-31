@@ -351,7 +351,8 @@ Admins only:
 ➮ /listcmds - list all possible toggleable commands
 """
 
-__mod_name__ = "Disabling ❗️"   
+__mod_name__ = "Disabling ❗️"
+
     
 else:
     DisableAbleCommandHandler = CommandHandler
