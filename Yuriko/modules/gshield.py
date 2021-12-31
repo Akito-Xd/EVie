@@ -19,7 +19,7 @@ from Yuriko.services.telethonbasics import is_admin
 from Yuriko.events import register
 from Yuriko import MONGO_DB_URI 
 from pymongo import MongoClient
-from Yuriko.modules.sql_extended.nsfw_watch_sql import (
+from Yuriko.modules.sql.nsfw_watch_sql import (
     add_nsfwatch,
     get_all_nsfw_enabled_chat,
     is_nsfwatch_indb,
